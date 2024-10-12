@@ -1,0 +1,22 @@
+<div class="employee-list-container">
+  <p>Employee List</p>
+
+  <!-- Search Input -->
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search employees..." (input)="searchEmployees()" />
+
+  <!-- Add Employee Inputs -->
+  <input type="text" [(ngModel)]="name" placeholder="Enter employee name" />
+  <input type="text" [(ngModel)]="position" placeholder="Enter position" />
+  <input type="text" [(ngModel)]="department" placeholder="Enter department" />
+
+  <button (click)="addEmployee()">Add Employee</button>
+  <button (click)="clearAll()">Clear All</button> <!-- Clear all employees -->
+
+  <!-- Employee List -->
+  <ul>
+    <li *ngFor="let employee of filteredEmployeeList; let i = index">
+      Name: {{ employee.name }}, Position: {{ employee.position }}, Department: {{ employee.department }}
+      <button class="remove-btn" (click)="removeEmployee(i)">Remove</button>
+    </li>
+  </ul>
+</div>
