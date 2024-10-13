@@ -1,0 +1,21 @@
+<div class="city-list-container">
+  <p>City List</p>
+
+  <!-- Search Input -->
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search city..." (input)="searchCity()" />
+
+  <!-- Add City Inputs -->
+  <input type="text" [(ngModel)]="name" placeholder="Enter city name" />
+  <br>
+  <button (click)="addCity()">Add City</button>
+  <button (click)="clearAll()">Clear All</button>
+
+  <!-- City List -->
+  <ul>
+    <li *ngFor="let city of filteredCityList; let i = index">
+      {{ city }}
+      <button class="remove-btn" (click)="removeCity(i)">Remove</button>
+    </li>
+  </ul>
+</div>
+
