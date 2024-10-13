@@ -1,0 +1,20 @@
+<div class="movie-list-container">
+  <h1>Movie List</h1>
+
+  <!-- Search Input -->
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search movies..." (input)="searchMovies()" />
+
+  <!-- Add Movie Input -->
+  <input type="text" [(ngModel)]="newMovie" placeholder="Enter movie name" />
+
+  <button (click)="addMovie()">Add Movie</button>
+  <button (click)="clearAll()">Clear All</button> <!-- Clear all movies -->
+
+  <!-- Movie List -->
+  <ul>
+    <li *ngFor="let movie of filteredMovieList; let i = index">
+      {{ movie }}
+      <button class="remove-btn" (click)="removeMovie(i)">Remove</button>
+    </li>
+  </ul>
+</div>
