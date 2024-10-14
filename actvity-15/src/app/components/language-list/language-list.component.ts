@@ -36,7 +36,7 @@ export class LanguageListComponent {
   searchLanguage() {
     if (this.searchTerm.trim()) {
       this.filteredLanguageList = this.languageList.filter(model =>
-        model.toLowerCase().includes(this.searchTerm.toLowerCase())
+          model.toLowerCase().includes(this.searchTerm.toLowerCase())
       );
     } else {
       this.filteredLanguageList = [...this.languageList];  // Reset filtered list
