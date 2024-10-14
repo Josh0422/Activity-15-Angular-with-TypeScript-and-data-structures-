@@ -12,7 +12,7 @@ export class SubjectListComponent {
   searchTerm: string = '';  // Search term
 
 
-  addProduct() {
+  addSubject() {
     if (this.name.trim()) {
       this.subjectList.push(this.name);
       this.filteredSubjectList = [...this.subjectList];
@@ -21,19 +21,19 @@ export class SubjectListComponent {
   }
 
 
-  removeProduct(index: number) {
+  removeSubject(index: number) {
     this.subjectList.splice(index, 1);
     this.filteredSubjectList = [...this.subjectList];  // Update filtered list
   }
 
-  // Clear all car models
+
   clearAll() {
     this.subjectList = [];
     this.filteredSubjectList = [];
   }
 
 
-  searchProduct() {
+  searchSubject() {
     if (this.searchTerm.trim()) {
       this.filteredSubjectList = this.subjectList.filter(model =>
         model.toLowerCase().includes(this.searchTerm.toLowerCase())
