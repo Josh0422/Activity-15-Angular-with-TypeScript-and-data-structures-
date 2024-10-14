@@ -1,0 +1,20 @@
+<div class="car-model-list-container">
+  <p>Car Model List</p>
+
+  <!-- Search Input -->
+  <input type="text"  [(ngModel)]="searchTerm" placeholder="Search car model..." (input)="searchCarModel()" />
+
+  <!-- Add Car Model Inputs -->
+  <input type="text" [(ngModel)]="name" placeholder="Enter car model name" />
+  <br>
+  <button (click)="addCarModel()">Add Car Model</button>
+  <button (click)="clearAll()">Clear All</button>
+
+  <!-- Car Model List -->
+  <ul>
+    <li *ngFor="let model of filteredCarModelList; let i = index">
+      {{ model }}
+      <button class="remove-btn" (click)="removeCarModel(i)">Remove</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,82 @@
+/* General container styling */
+.car-model-list-container {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.car-model-list-container p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Input field styling */
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Buttons styling */
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button.remove-btn {
+  background-color: #dc3545;
+}
+
+button.remove-btn:hover {
+  background-color: #c82333;
+}
+
+/* Car model list styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li:hover {
+  background-color: #f9f9f9;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+  .car-model-list-container {
+    width: 100%;
+    padding: 10px;
+  }
+}
