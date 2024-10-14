@@ -1,0 +1,20 @@
+<div class="subject-list-container">
+  <p>Subject List</p>
+
+  <!-- Search Input -->
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search subject..." (input)="searchSubject()" />
+
+  <!-- Add Product Inputs -->
+  <input type="text" [(ngModel)]="name" placeholder="Enter subject name" />
+  <br>
+  <button (click)="addSubject()">Add Subject</button>
+  <button (click)="clearAll()">Clear All</button>
+
+  <!-- Product List -->
+  <ul>
+    <li *ngFor="let subject of filteredSubjectList; let i = index">
+      {{ product }}
+      <button class="remove-btn" (click)="removeSubject(i)">Remove</button>
+    </li>
+  </ul>
+</div>
