@@ -75,7 +75,7 @@ ul li:hover {
 
 /* Responsive design */
 @media (max-width: 500px) {
-  .product-list-container {
+  .subject-list-container {
     width: 100%;
     padding: 10px;
   }
