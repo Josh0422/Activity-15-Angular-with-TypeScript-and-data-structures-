@@ -1,0 +1,20 @@
+<div class="country-list-container">
+  <p>Country List</p>
+
+  <!-- Search Input -->
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search country..." (input)="searchCountry()" />
+
+
+  <input type="text" [(ngModel)]="name" placeholder="Enter Country name" />
+  <br>
+  <button (click)="addCountry()">Add Country</button>
+  <button (click)="clearAll()">Clear All</button>
+
+
+  <ul>
+    <li *ngFor="let country of filteredCountryList; let i = index">
+      {{ country }}
+      <button class="remove-btn" (click)="removeCountry(i)">Remove</button>
+    </li>
+  </ul>
+</div>
