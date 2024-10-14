@@ -1,0 +1,24 @@
+
+<div class="tool-list-container">
+  <p>Tool List</p>
+
+  <!-- Search Input -->
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search Tool..." (input)="searchTool()" />
+
+  <!-- Input to Add Vegetable -->
+  <input type="text" [(ngModel)]="name" placeholder="Enter Tool name" />
+  <br>
+
+  <!-- Buttons -->
+  <button (click)="addTool()">Add Tool</button> <!-- Corrected the label -->
+  <button (click)="clearAll()">Clear All</button>
+
+  <!-- List of Vegetables -->
+  <ul>
+    <li *ngFor="let tool of filteredToolList; let i = index">
+      {{ tool }}
+      <button class="remove-btn" (click)="removetool(i)">Remove</button>
+    </li>
+  </ul>
+</div>
+
