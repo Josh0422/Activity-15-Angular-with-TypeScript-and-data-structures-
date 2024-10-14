@@ -15,7 +15,6 @@ export class BookListComponent {
   // Initial list of books
   bookList: Book[] = [
     { name: 'Heart of the Lotus', author: 'Lina Espina-Moore', date: '1980' },
-    { name: 'Book 2', author: 'Author 2', date: '2022' },
   ];
 
   filteredBookList: Book[] = [...this.bookList];

@@ -1,0 +1,24 @@
+
+<div class="language-list-container">
+  <p>Language List</p>
+
+  <!-- Search Input -->
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search Language..." (input)="searchLanguage()" />
+
+  <!-- Input to Add Vegetable -->
+  <input type="text" [(ngModel)]="name" placeholder="Enter Language name" />
+  <br>
+
+  <!-- Buttons -->
+  <button (click)="addLanguage()">Add Language</button> <!-- Corrected the label -->
+  <button (click)="clearAll()">Clear All</button>
+
+  <!-- List of Vegetables -->
+  <ul>
+    <li *ngFor="let tool of filteredLanguageList; let i = index">
+      {{ tool }}
+      <button class="remove-btn" (click)="removeLanguage(i)">Remove</button>
+    </li>
+  </ul>
+</div>
+
