@@ -13,7 +13,7 @@
   <!-- Product List -->
   <ul>
     <li *ngFor="let subject of filteredSubjectList; let i = index">
-      {{ product }}
+      {{ subject }}
       <button class="remove-btn" (click)="removeSubject(i)">Remove</button>
     </li>
   </ul>
