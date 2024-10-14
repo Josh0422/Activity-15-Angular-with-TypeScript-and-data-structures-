@@ -1,0 +1,20 @@
+<div class="animal-list-container">
+  <p>Animal List</p>
+
+  <!-- Search Input -->
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search Sports..." (input)="searchAnimal()" />
+
+
+  <input type="text" [(ngModel)]="name" placeholder="Enter Animal name" />
+  <br>
+  <button (click)="addAnimal()">Add Animal</button>
+  <button (click)="clearAll()">Clear All</button>
+
+
+  <ul>
+    <li *ngFor="let sports of filteredAnimalList; let i = index">
+      {{ sports }}
+      <button class="remove-btn" (click)="removeAnimal(i)">Remove</button>
+    </li>
+  </ul>
+</div>
