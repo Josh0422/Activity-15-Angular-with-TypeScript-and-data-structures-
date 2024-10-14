@@ -1,0 +1,24 @@
+
+<div class="vegetable-list-container">
+  <p>Vegetable List</p>
+
+  <!-- Search Input -->
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search Vegetable..." (input)="searchVegetable()" />
+
+  <!-- Input to Add Vegetable -->
+  <input type="text" [(ngModel)]="name" placeholder="Enter Vegetable name" />
+  <br>
+
+  <!-- Buttons -->
+  <button (click)="addVegetable()">Add Vegetable</button> <!-- Corrected the label -->
+  <button (click)="clearAll()">Clear All</button>
+
+  <!-- List of Vegetables -->
+  <ul>
+    <li *ngFor="let vegetable of filteredVegetableList; let i = index">
+      {{ vegetable }}
+      <button class="remove-btn" (click)="removeVegetable(i)">Remove</button>
+    </li>
+  </ul>
+</div>
+
